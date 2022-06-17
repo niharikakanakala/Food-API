@@ -8,6 +8,8 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 
+// import { UserContext } from "../../context/user.context";
+
 import "./sign-up-form.styles.scss";
 
 const defaultFormFields = {
@@ -19,8 +21,11 @@ const defaultFormFields = {
 
 export const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  console.log(formFields);
   const { displayName, email, password, confirmPassword } = formFields;
+
+  //   const { setCurrentUser } = useContext(UserContext);
+
+  console.log("hit");
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -39,6 +44,7 @@ export const SignUpForm = () => {
         email,
         password
       );
+
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {

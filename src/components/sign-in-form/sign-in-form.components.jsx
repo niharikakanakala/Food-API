@@ -3,6 +3,12 @@ import { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.components";
 
+//userContext will give us back the value what we store in the usercontext in the context folder
+//so we have the values from setState i.e., currentUser and SetCurrentUSer and the values we instantiated as the object as value
+//so we will get this object back, i.e.,what is the current user into our sign-in-form component
+//that is why we import UserContext here
+// import { UserContext } from "../../context/user.context";
+
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
@@ -20,24 +26,25 @@ export const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+  //   const { setCurrentUser } = useContext(UserContext);
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+
       resetFormFields();
     } catch (error) {
       switch (error.code) {
