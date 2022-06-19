@@ -9,7 +9,7 @@ import { UserProvider } from "./context/user.context";
 
 import { PizzasProvider } from "./context/pizzas.context";
 
-import { CartContext, CartProvider } from "./context/cart.context";
+import { CartProvider } from "./context/cart.context";
 
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";

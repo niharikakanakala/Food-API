@@ -2,7 +2,7 @@ import { PizzasContext } from "../../context/pizzas.context";
 
 import { useContext } from "react";
 
-import { ProductCard } from "../../components/product-card/product-card.styles";
+import { ProductCard } from "../../components/product-card/product-card.components";
 
 import "./pizzas.styles.scss";
 
@@ -16,8 +16,8 @@ export const Pizzas = () => {
       </div>
 
       <div className="pizza-container">
-        {data?.map((product) => (
-          <ProductCard id={product.id} product={product} />
+        {data?.map((pizza) => (
+          <ProductCard id={pizza.id} pizza={pizza} />
         ))}
       </div>
     </div>
