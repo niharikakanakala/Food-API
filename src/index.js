@@ -7,6 +7,8 @@ import App from "./App";
 
 import { UserProvider } from "./context/user.context";
 
+import { PizzasProvider } from "./context/pizzas.context";
+
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 
@@ -15,7 +17,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <PizzasProvider>
+          <App />
+        </PizzasProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

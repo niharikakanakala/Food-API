@@ -1,7 +1,7 @@
 import "./App.css";
 import { Home } from "./routes/home/home.routes";
 import { Navigation } from "./routes/navigation/navigation.routes";
-import { Pizzas } from "./routes/pizzas/pizzas.components";
+import { Pizzas } from "./routes/pizzas/pizzas.routes.jsx";
 import { Route, Routes } from "react-router";
 import { Authentication } from "./routes/authentication/authentication.routes";
 

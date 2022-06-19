@@ -32,6 +32,21 @@
       }
     }
   
+    &.pizza {
+      background-color: #0a8020;
+      color: white;
+      border-radius: 6px;
+      padding-right: 9px;
+      min-width: 205px;
+      width: auto;
+
+      &:hover {
+          background-color: darkgreen;
+          color: white;
+          border: none;
+      }
+    }
+
     &.inverted {
       background-color: white;
       color: black;

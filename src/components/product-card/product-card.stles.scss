@@ -1,0 +1,66 @@
+$sub-color: grey;
+
+.product-card-container {
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  align-items: center;
+  position: relative;
+  font-family: SharpSansSemiBold,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+      font-family: 'Fira Sans Condensed', sans-serif;
+      font-size: 1.2 rem;
+      font-weight: 600;
+      width: 100%;
+      background-color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+    
+      .footer {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+    
+
+            .description {
+                color: $sub-color;
+                text-align: start;
+            }
+        }
+
+      .button{
+        
+          height: 50px;
+          padding: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        
+          .btn-data {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        
+            .btn-add {
+                
+                width: 90%;
+            }
+            .btn-price {
+                
+                
+                // width: 10%;
+            }
+          }
+      }
+  }
+  
+}

@@ -24,9 +24,11 @@ $my-color: plum;
     border-radius: none;
     border-bottom: 1px solid $sub-color;
     margin: 25px 0;
+    transition: border-bottom 1s ease-in-out;
 
     &:focus {
       outline: none;
+      border-bottom: 4px solid rgb(100, 213, 228);
     }
 
     &:focus ~ .form-input-label {

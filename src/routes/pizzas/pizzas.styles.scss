@@ -1,0 +1,35 @@
+.pizza-container {
+    padding: 30px;
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+.header{
+    display: flex;
+    text-align: center;
+
+
+    h1{
+        display:table; /* fit content width*/
+        margin:20px auto; /* center*/
+        padding:0 10px; /* control the space between the text and the line */
+        box-shadow:0 0 0 600px rgb(184, 180, 180); /* control the line length and color here */
+        --s:2px; /* control the line thickness*/
+        clip-path:
+          polygon(0 0,100% 0,
+              99%     calc(50% - var(--s)/2),
+              200vmax calc(50% - var(--s)/2), 
+              200vmax calc(50% + var(--s)/2),
+              99%     calc(50% + var(--s)/2),
+            100% 100%,0 100%,
+              1px     calc(50% + var(--s)/2),
+             -200vmax calc(50% + var(--s)/2),
+             -200vmax calc(50% - var(--s)/2),
+              1px     calc(50% - var(--s)/2));
+      }
+      
+}
+
+
