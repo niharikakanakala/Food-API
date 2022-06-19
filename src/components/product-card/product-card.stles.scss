@@ -1,7 +1,8 @@
 $sub-color: grey;
+$color: rgb(190, 182, 182);
 
 .product-card-container {
-
+  padding: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -23,6 +24,7 @@ $sub-color: grey;
       background-color: white;
       padding-left: 10px;
       padding-right: 10px;
+      padding-bottom: 10px;
     
       .footer {
         width: 100%;
@@ -30,17 +32,21 @@ $sub-color: grey;
         display: flex;
         flex-direction: column;
     
-
+            .name{
+                .span{
+                    color: $color;
+                }
+            }
             .description {
                 color: $sub-color;
                 text-align: start;
             }
         }
-
+       
       .button{
         
           height: 50px;
-          padding: 30px;
+          padding: 10px;
           display: flex;
           align-items: center;
           justify-content: center;

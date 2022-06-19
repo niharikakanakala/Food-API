@@ -8,7 +8,10 @@ export const ProductCard = ({ product }) => {
       <img src={img} alt={`${name}`} />
       <div className="container">
         <div className="footer">
-          <h4 className="name">{name}(medium)</h4>
+          <h4 className="name">
+            {name}
+            <span className="span"> (medium)</span>
+          </h4>
           <p className="description">{description}</p>
         </div>
         <div className="button">
