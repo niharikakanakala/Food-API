@@ -11,6 +11,10 @@ import { PizzasProvider } from "./context/pizzas.context";
 
 import { CartProvider } from "./context/cart.context";
 
+import { Elements } from "@stripe/react-stripe-js";
+
+import { stripePromise } from "./utils/stripe/stripe.utils";
+
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 
@@ -18,13 +22,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <UserProvider>
-        <PizzasProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </PizzasProvider>
-      </UserProvider>
+      <Elements stripe={stripePromise}>
+        <UserProvider>
+          <PizzasProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </PizzasProvider>
+        </UserProvider>
+      </Elements>
     </BrowserRouter>
   </React.StrictMode>
 );
